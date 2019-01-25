@@ -9,8 +9,65 @@ if (drums.length > 0) {
   }
 }
 
-var tom1Sound = new Audio("./sounds/tom-1.mp3");
+// Handle button mouse clicks
+function handleClick() {
+  var buttonInnerHTML = this.innerHTML;
+  soundPlayback(buttonInnerHTML);
+  buttonAnimation(buttonInnerHTML);
+}
 
-function handleClick () {
-  tom1Sound.play();
+// Detect keyboard presses
+document.addEventListener("keypress", function(event) { //callback function
+  soundPlayback(event.key);
+  buttonAnimation(event.key);
+
+});
+
+//
+function soundPlayback(key) {
+  switch (key) {
+    case "w":
+      var kick = new Audio("./sounds/kick-bass.mp3");
+      kick.play();
+      break;
+
+    case "a":
+      var snare = new Audio("./sounds/snare.mp3");
+      snare.play();
+      break;
+
+    case "s":
+      var tom1 = new Audio("./sounds/tom-1.mp3");
+      tom1.play();
+      break;
+
+    case "d":
+      var tom2 = new Audio("./sounds/tom-2.mp3");
+      tom2.play();
+      break;
+
+    case "j":
+      var tom3 = new Audio("./sounds/tom-3.mp3");
+      tom3.play();
+      break;
+
+    case "k":
+      var tom4 = new Audio("./sounds/tom-4.mp3");
+      tom4.play();
+      break;
+
+    case "l":
+      var crash = new Audio("./sounds/crash.mp3");
+      crash.play();
+      break;
+
+    default:
+      console.log(buttonInnerHTML);
+  }
+}
+
+function buttonAnimation (currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed"); 
 }
