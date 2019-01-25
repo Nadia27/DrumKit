@@ -9,6 +9,8 @@ if (drums.length > 0) {
   }
 }
 
+var tom1Sound = new Audio("./sounds/tom-1.mp3");
+
 function handleClick () {
-  alert("I was clicked");
+  tom1Sound.play();
 }
