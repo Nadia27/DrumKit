@@ -23,7 +23,7 @@ document.addEventListener("keypress", function(event) { //callback function
 
 });
 
-//
+// Create function that play sound according to letter or button clicks
 function soundPlayback(key) {
   switch (key) {
     case "w":
@@ -66,12 +66,17 @@ function soundPlayback(key) {
   }
 }
 
+// Button animations w/ timer
 function buttonAnimation (currentKey) {
+
+  // Grab class attribute of button pressed
   var activeButton = document.querySelector("." + currentKey);
 
+  // Add a class of "pressed" to active button
   activeButton.classList.add("pressed");
 
-setTimeout(function () {
-  activeButton.classList.remove("pressed");
-}, 100);
+  // Apply animation for 1 second
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 1000);
 }
