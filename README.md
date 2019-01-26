@@ -20,7 +20,7 @@ A drum kit built with vanilla Javascript.
 * Caching DOM queries and what they return i.e., one element, HTML Collections, or NodeList.<br/><br/> 
           * The difference between Node List and HTML collections i.e., live and static list <br/> 
                 * HTML Collections - are live list and return elements.<br/>
-                * Node List - are static list that return any all kinds of nodes.<br/> 
+                * Node List - are static list that return any and all kinds of nodes.<br/> 
                 
                 
 
