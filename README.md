@@ -4,7 +4,7 @@ A drum kit built with vanilla Javascript.
 
 ## Built With
 
-* HTML 
+* HTML
 * CSS
 * Javascript
 
